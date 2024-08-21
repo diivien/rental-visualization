@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartment Trends and Socio-Economic Realities</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="https://unpkg.com/simpleheat/simpleheat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-quadtree@3"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-container d-flex align-items-center">
+            <div class="header-titles mx-auto">
+                <h1 id="dashboard-main-title">test</h1>
+                <h2 id="dashboard-subtitle">test</h2>
+            </div>
+            <div id="racial-breakdown"></div>
+
+        </div>
+        <div class="map-container d-flex justify-content-between">
+            <div id="map"></div>
+            <div id="price-per-sqft"></div>
+        </div>
+        <div class="visualization-container">
+            <div id="pet-friendly"></div>
+            <div id="average-crimes"></div>
+        </div>
+        <div id="radar-chart"></div>
+    </div>
+    <script src="js/radarChart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+body {
+  font-family: Roboto;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  background-image: url('../bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+}
+
+.container {
+  max-width: 1600px;
+  margin: 16px auto;
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  position: relative; /* Add this line */
+  z-index: 1; /* Add this line */
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: blur(5px); /* Apply a blur effect to the background image */
+  z-index: -1; /* Ensure the ::before element is behind the container */
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Add a semi-transparent black overlay */
+  z-index: -1; /* Ensure the ::after element is behind the container */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 0px;
+  color: white;
+  font-size: 32px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 32px;
+  color: white;
+  font-size: 25px;
+}
+
+.map-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  gap: 40px
+}
+
+#map {
+  width: 60%;
+  height: 400px;
+  padding: 0px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+#price-per-sqft {
+  width: 40%;
+  height: 400px;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.visualization-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0px;
+  gap: 40px;
+}
+
+#pet-friendly,
+#average-crimes,
+#radarChart {
+  width: 50%;
+  height: 392px;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+#racial-breakdown{
+  width: 50%;
+  height: 392px;
+  padding: 8px;
+  /* background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); */
+}
+
+#dashboard-main-title,
+#dashboard-subtitle {
+  visibility: hidden;
+  margin: 0;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 15px;
+  margin-top: 0px;
+  
+}
+
+#racial-breakdown {
+  position: absolute;
+  right: 0;
+  width: 16%;
+  height: 140%;
+}
+
+.header-titles {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
